@@ -106,7 +106,7 @@ namespace ScadaArchiveAdapter
             var apiClient = new HttpClient();
             apiClient.SetBearerToken(token);
 
-            var response = await apiClient.GetAsync($"{Config_.DataHost}/api/scadadata/GetMeasurements/ict");
+            var response = await apiClient.GetAsync($"{Config_.DataHost}/api/scadadata/GetMeasurements/all");
             if (!response.IsSuccessStatusCode)
             {
                 //Console.WriteLine(response.StatusCode);
